@@ -15,11 +15,11 @@ Answer should be simplr in JAVA - right?
 
 This builds the house and your customer is happy. But the next customer wants the house to be painted and furnished while another wants it only painted.
 
-> You now need to revisit the House class with a set of overloaded constructors.
+> You now need to revisit the House class with a set of overloaded >constructors.
 
 **Although this will work, we have a flawed design.**
 
-> What we applied here is **telescopic constructor pattern.**, _which is considered an ***anti-pattern***._
+> What we applied here is **telescopic constructor pattern.**, _which >is considered an ***anti-pattern***._
 
 ---
 
