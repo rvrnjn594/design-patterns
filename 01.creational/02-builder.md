@@ -52,8 +52,24 @@ In the context of the house building example, the step-by-step process includes 
 
 To understand how the builder pattern works, let us solve the problems of our house building example.
 
-    The main problem was that we expected the clients to perform the steps to construct a house and that too in the correct order. So, how will we address this in real life? We will hire a construction engineer who knows the process to construct houses.
+> -The main problem was that we expected the clients to perform the steps to construct a house and that too in the correct order. So, how will we address this in real life? We will hire a construction engineer who knows the process to construct houses.
+> -The second problem was that we require different types of houses, such as concrete, prefabricated, tree house, and even Igloos. So next, we will hire builders (contractors) who specializes in building specific types of houses. A builder knows how to put things together with actual building materials, components, and parts to build a particular type of house. For example, a concrete house builder knows how to build the structure of a concrete house using concrete, brick, and stone. Similarly, a prefabricated house builder knows how to build the structure of a prefabricated house using structural steels and wooden wall panels. So from now on, whenever we need a house, the construction engineer will direct a builder to build the house.
 
-    The second problem was that we require different types of houses, such as concrete, prefabricated, tree house, and even Igloos. So next, we will hire builders (contractors) who specializes in building specific types of houses. A builder knows how to put things together with actual building materials, components, and parts to build a particular type of house. For example, a concrete house builder knows how to build the structure of a concrete house using concrete, brick, and stone. Similarly, a prefabricated house builder knows how to build the structure of a prefabricated house using structural steels and wooden wall panels. So from now on, whenever we need a house, the construction engineer will direct a builder to build the house.
+> In our application, we can model the construction engineer by creating a ConstructionEngineer class. Then we can model the builders by first creating a HouseBuilder interface and then builder classes, such as ConcreteHouseBuilder and PrefabricatedHouseBuilder that implement the HouseBuilder interface. Here, notice that we have added a layer of abstraction by providing an interface (HouseBuilder). This is because we do not want our construction engineer to be tied with a particular builder. The construction engineer should be able to direct any builder that implements the HouseBuilder interface to build a house. This will also allow us to later add new builders without making changes to the existing application code.
+
+##### We now summarize the components of the builder pattern in the context of the house building example as:
+
+- Product (House): A class that represents the product to create.
+- Builder (HouseBuilder): Is an interface to build the parts of a product.
+- ConcreteBuilder (ConcreteHouseBuilder and PrefabricatedHouseBuilder): Are concrete classes that implements Builder to construct and assemble parts of the product and return the finished product.
+- Director (ConstructionEngineer): A class that directs a builder to perform the steps in the order that is required to build the product.
+
+#### [Applying the Builder Pattern](https://springframework.guru/gang-of-four-design-patterns/builder-pattern/)
+
+To apply the builder pattern to the house building example, let us create the product that the builders will construct.
+
+See the example with code in this section [here](https://springframework.guru/gang-of-four-design-patterns/builder-pattern/).
+
+---
 
 **AntiPattern** (_Contrast to an_ **AmeliorationPattern**, which is a pattern that tells how to go from a bad solution to a good solution.): An AntiPattern is a pattern that tells how to go from a problem to a bad solution.
