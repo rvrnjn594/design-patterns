@@ -12,26 +12,27 @@ Note: It is easy to confuse the abstract factory pattern with the factory method
 ### Abstract Factory Pattern vs Factory Method Pattern
 
 1. **Abstract factory adds another level of abstraction to factory method.**
-   While factory method abstracts the way objects are created, abstract factory abstracts how >the factories are created. The factories in turn abstracts the way objects are created.  
-    You will often hear the abstract factory design pattern referred to as a _"factory of factories"._
+
+While factory method abstracts the way objects are created, abstract factory abstracts how the factories are created. The factories in turn abstracts the way objects are created.  
+You will often hear the abstract factory design pattern referred to as a _"factory of factories"._
 
 2.From implementation point of view, the key difference between the factory method and abstract factory patterns is that **_factory method is just a method to create objects of a single type, while abstract factory is an object to create families of objects._**
 
 3.Another difference is that factory method pattern uses inheritance while abstract factory pattern uses composition. - We say that factory method uses inheritance because this pattern relies on a subclass for the requires object instantiation.
 
-- On the other hand, the abstract factory pattern delegates responsibility to seperate a object(abstract factory) dedicated to create a family of related objects. Then through composition, the abstract factory object can be passed to the client who will use it (instead of factory method) to get the family of related objects.
+On the other hand, the abstract factory pattern delegates responsibility to seperate a object(abstract factory) dedicated to create a family of related objects. Then through composition, the abstract factory object can be passed to the client who will use it (instead of factory method) to get the family of related objects.
 
 ### Participant in Abstract Factory Pattern
 
 - AbstractProduct: Is an interface or an abstract class whose subclasses are instantiated by abstract factory objects.
 - ConcreteProduct: Are the concrete subclasses that implement/extend AbstractProduct. The abstract factory objects instantiate these subclasses.
-- [h]:AbstractFactory: Is an interface or an abstract class whose subclasses instatiates these subclasses.
+- AbstractFactory: Is an interface or an abstract class whose subclasses instatiates these subclasses.
 - ConcreteFactory: Are the concrete subclasses that implement/extend AbstractFactory. An object of this subclass instantiates a family of AbstractProduct objects.
-- Client: Uses [AbstractFactory]:[h] to get AbstractProduct objects.
+- Client: Uses AbstractFactory to get AbstractProduct objects.
 
 See example in the section:
 
-#### [Applying the abstract factory pattern ]: (https://springframework.guru/gang-of-four-design-patterns/abstract-factory-design-pattern/)
+**[Applying the abstract factory pattern ]:(https://springframework.guru/gang-of-four-design-patterns/abstract-factory-design-pattern/)**
 
 Defintion of abstract factory earlier: our abstract factory is providing an _**"interface to create families of related or dependent objects."**_  
 The definition also states "...but you do not specify the concrete classes of the objects to create."
