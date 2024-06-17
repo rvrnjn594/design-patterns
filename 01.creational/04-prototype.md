@@ -14,8 +14,10 @@ While the prototype pattern is itself simple, **_it is important to learn the in
 
 ### Object Cloning: Shallow Copy vs Deep Copy
 
-**_Java provides the Cloneable interface to mark objects that permit cloning. This interface is a marker interface and therefore does not contain any method declaration._**  
-When implemented in a class, Cloneable marks that objects of the class can be cloned. To perform cloning, you need to call the protected clone() method of the Object class through a call to super.clone().  
+**_Java provides the Cloneable interface to mark objects that permit cloning. This interface is a marker interface and therefore does not contain any method declaration._**
+
+When implemented in a class, Cloneable marks that objects of the class can be cloned. To perform cloning, you need to call the protected clone() method of the Object class through a call to super.clone().
+
 **Note:** If an object calls super.clone() but does not implements Cloneable, the method throws an exception of type, CloneNotSupportedException.
 
 > A call to super.clone() performs a shallow copy where all the fields values of the original object are copied to the new object. If a field value is a primitive type, a shallow copy copies the value of the primitive type. But, if a field value is a reference type, then only the reference is copied, and not the referred object itself. **_Therefore, both the original and its clone refer to the same object and if either one modifies the referred object, the modification will be visible to the other. This might result in unexpected behavior in an application._**  

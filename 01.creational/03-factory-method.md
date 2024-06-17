@@ -19,14 +19,16 @@ You can then create a subclass of BasePizzaFactory, called PizzaFactory to imple
 
 **The components of the factory method pattern in the context of the pizza store can be summarized as:**
 
-- Product (Pizza): Is an interface or an abstract class whose subclasses are instantiated by the factory method.
-- ConcreteProduct (CheesePizza, PepperoniPizza, and VeggiePizza): Are the concrete subclasses that implement/extend Product. The factory method instantiates these subclasses.
-- Creator (BaseFactoryPizza): Is an interface or an abstract class that declares the factory method, which returns an object of type Product.
-- ConcreteCreator (PizzaFactory): Is a concrete class that implements the factory method to crete and return a ConcreteProduct to Client.
-- Client: Asks the Creator for a Product.
+> - Product (Pizza): Is an interface or an abstract class whose subclasses are instantiated by the factory method.
+> - ConcreteProduct (CheesePizza, PepperoniPizza, and VeggiePizza): Are the concrete subclasses that implement/extend Product. The factory method instantiates these subclasses.
+> - Creator (BaseFactoryPizza): Is an interface or an abstract class that declares the factory method, which returns an object of type Product.
+> - ConcreteCreator (PizzaFactory): Is a concrete class that implements the factory method to crete and return a ConcreteProduct to Client.
+> - Client: Asks the Creator for a Product.
 
 A Client that requires a ConcreteProduct does not create any object but instead asks the Creator for it. The ConcreteCreator implements the factory method to create the object transparently from the Client
-As a result, the Client is not required to be aware of any ConcreteProduct and how they are created. This approach advocates the OOP principle: **"Program to an interface, not to an implementation"**, which leads to polymorphism, a key feature of OOP.  
+
+As a result, the Client is not required to be aware of any ConcreteProduct and how they are created. This approach advocates the OOP principle: **"Program to an interface, not to an implementation"**, which leads to polymorphism, a key feature of OOP.
+
 In addition, as object creation is centralized in the ConcreteCreator, any changes made to a Product or any ConcreteProduct does not affect the Client.
 
 ### [Applying the Factory Method Pattern](https://springframework.guru/gang-of-four-design-patterns/factory-method-design-pattern/)
@@ -40,7 +42,6 @@ To apply the factory method pattern in the pizza store application, let us first
         System.out.println("Pizza baked at 400 for 20 minutes.");
         }
     }
-
     //package guru.springframework.gof.factoryMethod;
     public class CheesePizza extends Pizza {
         @Override
@@ -48,7 +49,6 @@ To apply the factory method pattern in the pizza store application, let us first
         System.out.println("Preparing ingredients for cheese pizza.");
         }
     }
-
     //package guru.springframework.gof.factoryMethod;
     public class PepperoniPizza extends Pizza {
         @Override
@@ -56,7 +56,6 @@ To apply the factory method pattern in the pizza store application, let us first
             System.out.println("Preparing ingredients for pepperoni pizza.");
         }
     }
-
     //package guru.springframework.gof.factoryMethod;
     public class VeggiePizza extends Pizza {
         @Override
@@ -67,7 +66,8 @@ To apply the factory method pattern in the pizza store application, let us first
 
 See the example described [here](https://springframework.guru/gang-of-four-design-patterns/factory-method-design-pattern/).
 
-> In the example above, we wrote the Pizza class with an abstract addIngredient() method and defined a bakePizza() method. We then wrote three subclasses: CheezePiza, PepperoniPizza, and VeggiePizza that provide their own implementation of the addIngredient() method. The subclasses being derived from Pizza inherit the bakePizza() method defined in Pizza.  
+> In the example above, we wrote the Pizza class with an abstract addIngredient() method and defined a bakePizza() method. We then wrote three subclasses: CheezePiza, PepperoniPizza, and VeggiePizza that provide their own implementation of the addIngredient() method. The subclasses being derived from Pizza inherit the bakePizza() method defined in Pizza.
+
 > Next, we will create the abstract BaseFactory class, which is the Creator in the application.
 
      //package guru.springframework.gof.factoryMethod;
@@ -132,6 +132,8 @@ See the example described [here](https://springframework.guru/gang-of-four-desig
 ### Conclusion
 
 Java APIs and frameworks extensively use the factory method pattern.  
-You should also consider using it because of the advantages it provides.  
-The key advantage, that you have already learned, is how the factory method pattern helps encapsulate object creation code from the client code.  
+You should also consider using it because of the advantages it provides.
+
+The key advantage, that you have already learned, is how the factory method pattern helps encapsulate object creation code from the client code.
+
 This decouples your client code from the concrete classes you need to instantiate. Therefore, while developing applications, if you see an oppurtunity to encapsulate object creation code, apply the factory method pattern. Also, by using this pattern you will have a centeralized location for object creation code, which will make it easy for you to debug and troubleshoot....
