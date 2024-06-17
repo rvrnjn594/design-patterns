@@ -1,4 +1,4 @@
-# Builder Pattern
+### Builder Pattern
 
 > "Seperate the construction of a complex object from its >representation so that the same construction process can create >different representations."
 
@@ -41,14 +41,14 @@ At this point you should consider yourself lucky because other people have faced
 
 # Builder Pattern
 
-#### Introduction to the Builder Pattern
+### Introduction to the Builder Pattern
 
 The builder pattern allows you to **enforce a step-by-step process to construct a complex object as a finished product**.  
 In this pattern, **_the step-by-step construction process remains same but the finished products can have different representations_**.
 
 In the context of the house building example, the step-by-step process includes the steps to create the foundation, structure, and roof followed by the steps to paint and furnish a house and these steps remain the same irrespective of the type of house to build. The finished product, which is a house, can have different representations. That is, it can be a concrete house, a prefabricated house, or a tree house.
 
-#### Participant in the Builder Pattern
+### Participant in the Builder Pattern
 
 To understand how the builder pattern works, let us solve the problems of our house building example.
 
@@ -57,18 +57,27 @@ To understand how the builder pattern works, let us solve the problems of our ho
 
 > In our application, we can model the construction engineer by creating a ConstructionEngineer class. Then we can model the builders by first creating a HouseBuilder interface and then builder classes, such as ConcreteHouseBuilder and PrefabricatedHouseBuilder that implement the HouseBuilder interface. Here, notice that we have added a layer of abstraction by providing an interface (HouseBuilder). This is because we do not want our construction engineer to be tied with a particular builder. The construction engineer should be able to direct any builder that implements the HouseBuilder interface to build a house. This will also allow us to later add new builders without making changes to the existing application code.
 
-##### We now summarize the components of the builder pattern in the context of the house building example as:
+#### We now summarize the components of the builder pattern in the context of the house building example as:
 
 - Product (House): A class that represents the product to create.
 - Builder (HouseBuilder): Is an interface to build the parts of a product.
 - ConcreteBuilder (ConcreteHouseBuilder and PrefabricatedHouseBuilder): Are concrete classes that implements Builder to construct and assemble parts of the product and return the finished product.
 - Director (ConstructionEngineer): A class that directs a builder to perform the steps in the order that is required to build the product.
 
-#### [Applying the Builder Pattern](https://springframework.guru/gang-of-four-design-patterns/builder-pattern/)
+### [Applying the Builder Pattern](https://springframework.guru/gang-of-four-design-patterns/builder-pattern/)
 
 To apply the builder pattern to the house building example, let us create the product that the builders will construct.
 
 See the example with code in this section [here](https://springframework.guru/gang-of-four-design-patterns/builder-pattern/).
+
+> As you can see in the example above, **a client is now insulated from the object creation process**. _A client only needs to provide the Director a ConcreteBuilder to use. It is responsibility of the Director to instruct the ConcreteBuilder on the construction process and the ConcreteBuilder in turn will create the finished product. Finally, the client receives the finished product from the Director_.
+
+### Conclusion
+
+If you are familiar with the abstract factory pattern, you might have observed that both the abstract factory and builder patterns are similar, as both can be used to abstract object creation. But there are distinct differences between the two. - While abstract factory emphasizes on creating a family of related objects in one go, builder is about creating an object through step-by-step construction process and returning the object as the final step.
+In short **_abstracy factory is concerned with what is made_**, while **_the builder with how it is made._**
+
+**So as you go further into enterprise application development, whenever you need to create complex objects independently of the construction algorithm turn to the classic GoF Builder Pattern.**
 
 ---
 
