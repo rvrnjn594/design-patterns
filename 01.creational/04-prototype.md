@@ -25,5 +25,14 @@ When implemented in a class, Cloneable marks that objects of the class can be cl
 
 The difference between shallow and deep copy is illustrated in this figure:  
 ![Shallow vs Deep Copy](https://springframework.guru/wp-content/uploads/2015/04/4-23-2015-1-55-29-AM.jpg)  
-Important distinction to remember:  
- >In the figure above, an object X references an object O. A shallow copy of X creates a new object X2 that also references object O. In contrast, a deep copy of X creates a new object X2 that references the new object O2(copy of O).
+Important distinction to remember:
+
+> In the figure above, an object X references an object O. A shallow copy of X creates a new object X2 that also references object O. In contrast, a deep copy of X creates a new object X2 that references the new object O2(copy of O).
+
+When using the prototype pattern, should we go for shallow copy or for deep copy?
+
+> There is no hard and fast rule, it all depends on the requirement. If an object has only primitive fields or immutable objects (whose state cannot change, once created), use a shallow copy. When the object has references to other mutable objects, then either choose shallow copy or deep copy. For example, if the references are not modified anytime, avoid deep copy and go for shallow copy. But, if you know that the references will be modified and the modification might affect the intended behavior of the application, then you need to go for deep copy.
+
+> > When you go for a deep copy, you will need to override the Object.clone() method in all the member classes and then recursively clone their objects.
+
+> > Alternatively, you can get a deep copy by serializing an object and then restoring it back through Java object serialization. Using serialization is a simple approach, keep in mind serialization is resource intensive and can produce unexpected results if not done properly.
