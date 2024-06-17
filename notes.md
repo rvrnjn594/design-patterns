@@ -34,7 +34,7 @@ There are four ways of composing objects in UML: - property - assosiation - aggr
 > An aggregation is a kind of association that models a part/whole relationship between an aggregate(whole) and a group of related components(parts).
 > A composition, also called a composite aggregation, is a kind of aggregation that models a part/whole relationship between a composite(whole) and a group of exclusively owned parts.
 
-![UML properties to compose objects]:(https://upload.wikimedia.org/wikipedia/commons/4/4f/UML_properties_of_a_bicycle.png:Object composition using UML properties to compose objects)
+![UML properties to compose objects]:(https://upload.wikimedia.org/wikipedia/commons/4/4f/UML_properties_of_a_bicycle.png)
 
 **The relationship between the aggregate and its components is a weak "has-a" relationship**: The components may be part of several aggregates, may be accessed through other objects without going through the aggregate, and may outlive the aggregate object.  
 The state of component object still forms part of the aggregate object.
