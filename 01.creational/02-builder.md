@@ -21,8 +21,8 @@ This builds the house and your customer is happy. But the next customer wants th
 
 > What we applied here is **telescopic constructor pattern.**, _which >is considered an ***anti-pattern***._
 
-    - Though this pattern works for simple object creation with a limited number of fields, it becomes unmanageable for complex object creation. Imagine the number of constructors you will need to create a more complex house with options for plumbing, lightning, interiors, and so on.
-    - Another major problem in this design is related to constructor calls that clients need to make. It is hard and error prone ro write client code when there are multiple constructors, each with a large set of parameters. In addition, readability is a major issue with such client code.
+    >Though this pattern works for simple object creation with a limited number of fields, it becomes unmanageable for complex object creation. Imagine the number of constructors you will need to create a more complex house with options for plumbing, lightning, interiors, and so on.
+    >Another major problem in this design is related to constructor calls that clients need to make. It is hard and error prone ro write client code when there are multiple constructors, each with a large set of parameters. In addition, readability is a major issue with such client code.
 
 ###### One solution to telescopic constructor pattern is to follow JavaBeans convention by writing setter methods instead of a set of constructors to initialize the fields.
 
@@ -42,8 +42,9 @@ At this point you should consider yourself lucky because other people have faced
 #### Introduction to the Builder Pattern
 
 The builder pattern allows you to **enforce a step-by-step process to construct a complex object as a finished product**.  
-In this pattern, **_the step-by-step construction process remains same but the finished products can have different representations_**.  
- In the context of the house building example, the step-by-step process includes the steps to create the foundation, structure, and roof followed by the steps to paint and furnish a house and these steps remain the same irrespective of the type of house to build. The finished product, which is a house, can have different representations. That is, it can be a concrete house, a prefabricated house, or a tree house.
+In this pattern, **_the step-by-step construction process remains same but the finished products can have different representations_**.
+
+In the context of the house building example, the step-by-step process includes the steps to create the foundation, structure, and roof followed by the steps to paint and furnish a house and these steps remain the same irrespective of the type of house to build. The finished product, which is a house, can have different representations. That is, it can be a concrete house, a prefabricated house, or a tree house.
 
 #### Participant in the Builder Pattern
 
