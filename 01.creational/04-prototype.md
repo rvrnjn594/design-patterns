@@ -26,4 +26,4 @@ When implemented in a class, Cloneable marks that objects of the class can be cl
 The difference between shallow and deep copy is illustrated in this figure:  
 ![Shallow vs Deep Copy](https://springframework.guru/wp-content/uploads/2015/04/4-23-2015-1-55-29-AM.jpg)  
 Important distinction to remember:  
- In the figure above, an object X references an object O. A shallow copy of X creates a new object X2 that also references object O. In contrast, a deep copy of X creates a new object X2 that references the new object O2(copy of O).
+ >In the figure above, an object X references an object O. A shallow copy of X creates a new object X2 that also references object O. In contrast, a deep copy of X creates a new object X2 that references the new object O2(copy of O).
