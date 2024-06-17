@@ -1,4 +1,4 @@
-### Object composition
+# Object composition
 
 In computer science, **object composition** and **object aggregation** are _closely related ways to combine objects or data types into complex ones_.  
 In conversation the distinction between composition and aggregation is often ignored.
@@ -42,8 +42,6 @@ The state of component object still forms part of the aggregate object.
 **The relationship between the composite and its parts is a strong "has-a" realtionship**: The composite object has sole _"responsibility for the existence and storage of the composed objects"_, the composed object can be part of at most one composite, and "If a composite object is deleted, all of its part instances that are objects are deleted with it".  
 Thus in UML, composition has a more narrow meaning than the usual object composition.
 
----
-
 The graphical notation represents:
 
 - the property as a typed element in the box of the enclosing class,
@@ -51,8 +49,6 @@ The graphical notation represents:
 - the aggregation as an unfilled diamond on the side of the aggregate and a solid line,
 - the composition as a filled diamond on the side of the composite and a solid line.
   ![UML notation for association, composition and aggregation](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/UML_association%2C_aggregation_and_composition_examples_for_a_bicycle.png/440px-UML_association%2C_aggregation_and_composition_examples_for_a_bicycle.png)
-
----
 
 ### Aggregation
 
@@ -88,5 +84,7 @@ However, instead of implementing the exported interfaces by calling the interfac
 ##### Composite pattern
 
 - The composite design pattern is an object-oriented design based on composite types, that combines recursive composition and containment to inmplement complex part-whole hierarchies.
+
+---
 
 ---
