@@ -32,7 +32,7 @@ On the other hand, the abstract factory pattern delegates responsibility to sepe
 
 See example in the section:
 
-**[Applying the abstract factory pattern ]:(https://springframework.guru/gang-of-four-design-patterns/abstract-factory-design-pattern/)**
+**[Applying the abstract factory pattern](https://springframework.guru/gang-of-four-design-patterns/abstract-factory-design-pattern/)**
 
 Defintion of abstract factory earlier: our abstract factory is providing an _**"interface to create families of related or dependent objects."**_  
 The definition also states "...but you do not specify the concrete classes of the objects to create."
