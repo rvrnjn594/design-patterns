@@ -42,9 +42,8 @@ At this point you should consider yourself lucky because other people have faced
 #### Introduction to the Builder Pattern
 
 The builder pattern allows you to **enforce a step-by-step process to construct a complex object as a finished product**.  
-In this pattern, **_the step-by-step construction process remains same but the finished products can have different representations_**.
-
-    In the context of the house building example, the step-by-step process includes the steps to create the foundation, structure, and roof followed by the steps to paint and furnish a house and these steps remain the same irrespective of the type of house to build. The finished product, which is a house, can have different representations. That is, it can be a concrete house, a prefabricated house, or a tree house.
+In this pattern, **_the step-by-step construction process remains same but the finished products can have different representations_**.  
+ In the context of the house building example, the step-by-step process includes the steps to create the foundation, structure, and roof followed by the steps to paint and furnish a house and these steps remain the same irrespective of the type of house to build. The finished product, which is a house, can have different representations. That is, it can be a concrete house, a prefabricated house, or a tree house.
 
 #### Participant in the Builder Pattern
 
