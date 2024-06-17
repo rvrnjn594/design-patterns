@@ -26,11 +26,12 @@ This builds the house and your customer is happy. But the next customer wants th
 
 ###### One solution to telescopic constructor pattern is to follow JavaBeans convention by writing setter methods instead of a set of constructors to initialize the fields.
 
-    Clients can now call the setter methods with appropriate parameters to create House objects. Also, the client code are now more readable and therefore have lesser chances of errors creeping in.
-    Problems:
-            - The steps to build a house was not in the correct order.
-            - Another problem is the client having an instance of the house class in an inconsistent state. This means, if a client wants to create a House object with values for all its fields then the object will not have a complete state until all the setter methods have been called. As a result, some part of the client application might see and use a House object assuming that it is already constructed while that is actually not the case.
-    While you might be still pondering over the existing problems on hand, imagine that a customer calls up with a requirement for a prefabricated house, another customer for a tree house, and yet another for an Igloo. **Now, here is a whole new set of problems to solve.**
+> Clients can now call the setter methods with appropriate parameters to create House objects. Also, the client code are now more readable and therefore have lesser chances of errors creeping in.
+> Problems:
+>
+> - The steps to build a house was not in the correct order.
+> - Another problem is the client having an instance of the house class in an inconsistent state. This means, if a client wants to create a House object with values for all its fields then the object will not have a complete state until all the setter methods have been called. As a result, some part of the client application might see and use a House object assuming that it is already constructed while that is actually not the case.
+>   While you might be still pondering over the existing problems on hand, imagine that a customer calls up with a requirement for a prefabricated house, another customer for a tree house, and yet another for an Igloo. **Now, here is a whole new set of problems to solve.**
 
 At this point you should consider yourself lucky because other people have faced a similar problems and have come up with proven solutions.
 **It is time to learn the classic \***GoF Builder Pattern**\*.**
