@@ -21,4 +21,4 @@ This builds the house and your customer is happy. But the next customer wants th
 
 > What we applied here is **telescopic constructor pattern.**, _which is considered an [anti-pattern]:[anti_pattern_definition]._
 
-[anti_pattern_definition]:An AntiPattern is a pattern that tells how to go from a problem to a bad solution
+[anti_pattern_definition]:(An AntiPattern is a pattern that tells how to go from a problem to a bad solution)
