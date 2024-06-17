@@ -134,4 +134,4 @@ See the example described [here](https://springframework.guru/gang-of-four-desig
 Java APIs and frameworks extensively use the factory method pattern.  
 You should also consider using it because of the advantages it provides.  
 The key advantage, that you have already learned, is how the factory method pattern helps encapsulate object creation code from the client code.  
-This decouples your client code from the concrete classes you need to instantiate. Therefore, while developing applications, if you see an oppurtunity to encapsulate object creation code, apply the factory method pattern. Also, by using this pattern you will have a centeralized location for object creation code, which will make it easy for you to debug and troubleshoot.
+This decouples your client code from the concrete classes you need to instantiate. Therefore, while developing applications, if you see an oppurtunity to encapsulate object creation code, apply the factory method pattern. Also, by using this pattern you will have a centeralized location for object creation code, which will make it easy for you to debug and troubleshoot....
