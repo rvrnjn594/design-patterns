@@ -21,4 +21,6 @@ This builds the house and your customer is happy. But the next customer wants th
 
 > What we applied here is **telescopic constructor pattern.**, _which is considered an ***anti-pattern***._
 
+---
+
 **AntiPattern** (_Contrast to an_ **AmeliorationPattern**, which is a pattern that tells how to go from a bad solution to a good solution.): An AntiPattern is a pattern that tells how to go from a problem to a bad solution.
