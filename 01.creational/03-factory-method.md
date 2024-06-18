@@ -16,12 +16,17 @@ But when you work on large scale enterprise class applications, the amount of co
 
 > **_In the factory method pattern, you provide an interface, which can be a Java interface or an abstract class to create objects_**.
 
-A factory method in the interface **defers the object creation to one or more concrete subclasses at run time**. The subclasses implement the factory method to select the class whose objects need to be created.
+A factory method in the interface **defers the object creation to one or more concrete subclasses at run time**.  
+The subclasses implement the factory method to select the class whose objects need to be created.
 
 ### Participants in the Factory Method Pattern
 
-To understand how the factory method pattern works, consider a pizza store. In an application, you can model the pizzas as concrete Pizza objects, such as CheezePizza, PepperoniPizza, and VeggiePizza. Just as in any pizza store, a customer can only order a pizza and not make it. In the application, you can create an abstract class, say BasePizzaFactory with a factory method to create a pizza.  
-You can then create a subclass of BasePizzaFactory, called PizzaFactory to implement the factory method. In the factory method, you can create and return a proper Pizza object. The object returned will be proper subtype, and configured for use in your code.
+To understand how the factory method pattern works, consider a pizza store.
+
+> In an application, you can model the pizzas as concrete Pizza objects, such as CheezePizza, PepperoniPizza, and VeggiePizza. Just as in any pizza store, a customer can only order a pizza and not make it.  
+> In the application, you can create an abstract class, say BasePizzaFactory with a factory method to create a pizza.  
+> You can then create a subclass of BasePizzaFactory, called PizzaFactory to implement the factory method.  
+> In the factory method, you can create and return a proper Pizza object. The object returned will be proper subtype, and configured for use in your code.
 
 **The components of the factory method pattern in the context of the pizza store can be summarized as:**
 
@@ -31,10 +36,9 @@ You can then create a subclass of BasePizzaFactory, called PizzaFactory to imple
 > - ConcreteCreator (PizzaFactory): Is a concrete class that implements the factory method to crete and return a ConcreteProduct to Client.
 > - Client: Asks the Creator for a Product.
 
-A Client that requires a ConcreteProduct does not create any object but instead asks the Creator for it. The ConcreteCreator implements the factory method to create the object transparently from the Client
-
-As a result, the Client is not required to be aware of any ConcreteProduct and how they are created. This approach advocates the OOP principle: **"Program to an interface, not to an implementation"**, which leads to polymorphism, a key feature of OOP.
-
+A Client that requires a ConcreteProduct does not create any object but instead asks the Creator for it. The ConcreteCreator implements the factory method to create the object transparently from the Client.  
+As a result, the Client is not required to be aware of any ConcreteProduct and how they are created.  
+This approach advocates the OOP principle: **"Program to an interface, not to an implementation"**, which leads to polymorphism, a key feature of OOP.
 In addition, as object creation is centralized in the ConcreteCreator, any changes made to a Product or any ConcreteProduct does not affect the Client.
 
 ### [Applying the Factory Method Pattern](https://springframework.guru/gang-of-four-design-patterns/factory-method-design-pattern/)
@@ -76,7 +80,7 @@ See the example described [here](https://springframework.guru/gang-of-four-desig
 
 > Next, we will create the abstract BaseFactory class, which is the Creator in the application.
 
-     //package guru.springframework.gof.factoryMethod;
+    //package guru.springframework.gof.factoryMethod;
     public abstract class BasePizzaFactory {
         public abstract Pizza createPizza(String type);
     }
