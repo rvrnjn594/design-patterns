@@ -34,6 +34,7 @@ There are two variants of adapters:
 > Object adapter that relies on composition and class adapter that relies on inheritance.
 >
 > > As Java does not support multiple inheritance, you have to use object adapter when there are multiple classes that the adapter needs to address.
+> >
 > > Also, the approach to [favors composition over inheritance](https://en.wikipedia.org/wiki/Composition_over_inheritance) should be the driving factor using object adapters in Java.
 
 We can summarize the participants of the adapter pattern in the context of the text formatting example, as:
@@ -68,6 +69,7 @@ To apply the adapter pattern to the text formatting example, let's look at the e
     }
 
 > In the example above, the _TextFormattable_ interface declares a single _formatText()_ method that the _NewLineFormatter_ class overrides to return a string formatted with new line characters.
+
 > Next, let's look at the Adaptee interface and its implementation class.
 
 **CsvFormattable.java**
@@ -115,7 +117,9 @@ To apply the adapter pattern to the text formatting example, let's look at the e
     }
 
 > In the **_CsvAdapterImpl_** class above, we implemented the **_TextFormattable_** interface, which is the Target.
+
 > We then declare the _Adaptee_ type (CsvFormattable) as a field and initialized it in the constructor.
+
 > In the overridden formatText() method, we made a call to the formatCsvText() method, and returned back the CSV formatted string to the caller.
 
 Let's write a unit test for the example:
@@ -145,6 +149,7 @@ Let's write a unit test for the example:
     }
 
 > In the test above, we called the formatText() method of TextFormattable to format text without using the adaptor.
+
 > Later, we created a CsvAdapterImpl object passing a CsvFormatter object to its constructor. We then called the formatText() method, which at runtime got forwarded to a call to formatCsvText() on CsvFormatter.
 
 When you run the code above, you will see this output:
@@ -173,4 +178,5 @@ While this is true to some extent, we cannot expect an enterprise application, w
 **When doing Enterprise Application Development with the Spring Framework, you will be using adaptors built into the framework.**
 
 > Spring Integration uses JMS adaptors to send and receive JMS messages and JDBC messages and JDBC adapters to convert messages to database queries and result sets back to messages.
+
 > Spring also uses the adaptor design pattern to handle load-time-weaving used in Aspect-Oriented Programming (AOP). An adapter is used to inject AspectJ's aspects to bytecode during class loading done by the servlet container.
