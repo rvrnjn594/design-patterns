@@ -38,3 +38,9 @@ When using the prototype pattern, should we go for shallow copy or for deep copy
 > > When you go for a deep copy, you will need to override the Object.clone() method in all the member classes and then recursively clone their objects.
 
 > > Alternatively, you can get a deep copy by serializing an object and then restoring it back through Java object serialization. Using serialization is a simple approach, keep in mind serialization is resource intensive and can produce unexpected results if not done properly.
+
+### Example of the Prototype Pattern
+
+#### Participants of the Prototype Pattern
+
+> To understand how the prototype pattern works, consider a content production house that employs vendors to write content fot the organization.
