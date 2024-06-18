@@ -2,7 +2,8 @@
 
 ### What is Singleton?
 
-> The singleton pattern is ont of the Gang of Four creational design patterns. In software engineering, this is a term that implies a class which can **only be instantiated once**, and a global point of access to that instance is provided.  
+> The singleton pattern is ont of the Gang of Four creational design patterns. In software engineering, this is a term that implies a class which can **only be instantiated once**, and a global point of access to that instance is provided.
+
 > In the Java programming language, there are a few standard implementations of the singleton pattern. Here are some common ways of implementing a singleton.
 
     public class SingletonClass {

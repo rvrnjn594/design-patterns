@@ -32,9 +32,9 @@ Answer should be simple in JAVA - right?
 **_One solution to telescopic constructor pattern is to follow JavaBeans convention by writing setter methods instead of a set of constructors to initialize the fields._**
 [See JavaBeean.md](javabeans.md)
 
-> - Clients can now call the setter methods with appropriate parameters to create House objects. Also, the client code are now more readable and therefore have lesser chances of errors creeping in.
->   Problems:
->   -> The steps to build a house was not in the correct order.
+> - Clients can now call the setter methods with appropriate parameters to create House objects. Also, the client code are now more readable and therefore have lesser chances of errors creeping in.  
+>   Problems:  
+>   -> The steps to build a house was not in the correct order.  
 >   -> Another problem is the client having an instance of the house class in an inconsistent state. This means, if a client wants to create a House object with values for all its fields then the object will not have a complete state until all the setter methods have been called. As a result, some part of the client application might see and use a House object assuming that it is already constructed while that is actually not the case.  
 >    While you might be still pondering over the existing problems on hand, imagine that a customer calls up with a requirement for a prefabricated house, another customer for a tree house, and yet another for an Igloo. **Now, here is a whole new set of problems to solve.**
 
@@ -72,7 +72,7 @@ So from now on, whenever we need a house, the construction engineer will direct 
 
 - In our application, we can model the construction engineer by creating a _ConstructionEngineer class_.
 - Then we can model the builders by first creating a _HouseBuilder interface and then builder classes_, such as ConcreteHouseBuilder and PrefabricatedHouseBuilder that implement the HouseBuilder interface.
-  > Here, notice that we have added a layer of abstraction by providing an interface (HouseBuilder). **This is because we do not want our construction engineer to be tied with a particular builder.**
+  > Here, notice that we have added a layer of abstraction by providing an interface (HouseBuilder). **This is because we do not want our construction engineer to be tied with a particular builder**.  
   > The construction engineer should be able to direct any builder that implements the HouseBuilder interface to build a house. **This will also allow us to later add new builders without making changes to the existing application code.**
 
 #### We now summarize the components of the builder pattern in the context of the house building example as:
