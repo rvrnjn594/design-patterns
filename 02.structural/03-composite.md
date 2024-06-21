@@ -250,7 +250,9 @@ But like all good things, composite pattern too comes with a price.
 
 > The pattern can make your design overly general.
 >
-> > In the composite pattern, you have to define the composite methods at the root of the class hierarchy, and clients might mistakenly attempt to add or remove objects from leaf objects. But, keep in mind that design patterns do not come out of the box ready for any scenario. Design patterns are just a starting point to work from. You will need to adapt them to your requirements. That is what we exactly did by making the root component an abstract class and throwing exceptions in its composite methods.
+> > In the composite pattern, you have to define the composite methods at the root of the class hierarchy, and clients might mistakenly attempt to add or remove objects from leaf objects. But, keep in mind that design patterns do not come out of the box ready for any scenario.
+>
+> > Design patterns are just a starting point to work from. You will need to adapt them to your requirements. That is what we exactly did by making the root component an abstract class and throwing exceptions in its composite methods.
 
 When using the composite pattern during Enterprise Application Development with the Spring Framework, you might encounter the exception of type **BeanCreationException** during constructor injection because of circular references.
 
