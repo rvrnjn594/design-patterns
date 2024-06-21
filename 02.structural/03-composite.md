@@ -197,6 +197,7 @@ composite pattern in Java.
             /*Create primary products for main catalog*/
             CatalogComponent mJeanProduct=new Product("M: Jeans 32", 65.00);
             CatalogComponent mTShirtProduct=new Product("M: T Shirt 38", 45.00);
+
             /*Create a composite product catalog and add female products to it*/
             CatalogComponent newCatalog = new ProductCatalog("Female Products");
             CatalogComponent fJeans=new Product("F: Jeans 32", 65.00);
@@ -217,6 +218,7 @@ composite pattern in Java.
             mainCatalog.add(mTShirtProduct);
             mainCatalog.add(newCatalog);
             mainCatalog.add(kidCatalog);
+
             /*Print out product/catalog information*/
             mainCatalog.print();
         }
